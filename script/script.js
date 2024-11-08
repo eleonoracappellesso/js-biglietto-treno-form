@@ -14,7 +14,9 @@ const result = document.getElementById('finalPrice');
 const myTicket = document.getElementById('ticket');
 
 const totKm = parseInt(km.value);
+console.log(totKm);
 const passengerAge = parseInt(age.value);
+console.log(passengerAge);
 
 const totPrice = totKm * priceKm;
 console.log(totPrice);
