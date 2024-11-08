@@ -10,32 +10,40 @@
     <title>js-biglietto-treno-form</title>
 </head>
 
-<body>
+<body class="text-dark bg-opacity-50">
     <header>
-        <h1>Biglietto del treno</h1>
+        <h1 class="text-uppercase text-center text-light fw-bold py-2">Biglietto del treno</h1>
     </header>
     <main class="container">
+        <section class="bg-light p-5 rounded shadow-lg">
+            <form id="ticket" class="row d-flex">
+                <div class="my-3 col-md-6">
+                    <label for="totKm">Inserisci i km che vuoi percorrere</label>
+                    <input type="number" class="form-control" id="totKm" placeholder="km da percorrere" min="0">
+                </div>
+                <div class="my-3 col-md-6">
+                    <label for="age">Inserisci l'età del passeggero</label>
+                    <input type="number" class="form-control" id="age" placeholder="età del passeggero" min="0">
+                </div>
+                <div class="my-3 col">
+                    <label for="nameLastname">Inserisci nome e cognome del passeggero</label>
+                    <input type="text" class="form-control" id="nameLastname"
+                        placeholder="Nome e cognome del passeggero">
+                </div>
+                <div class="my-3">
+                    <input type="submit" value="Conferma" class="btn btn-outline-success">
+                    <input type="reset" value="Annulla" class="btn btn-outline-danger">
+                </div>
+            </form>
+        </section>
 
-        <form id="ticket">
-            <div class="m-3">
-                <label for="totKm">Inserisci i km che vuoi percorrere</label>
-                <input type="number" class="form-control" id="totKm" placeholder="km da percorrere" min="0">
-            </div>
-            <div class="m-3">
-                <label for="age">Inserisci l'età del passeggero</label>
-                <input type="number" class="form-control" id="age" placeholder="età del passeggero" min="0">
-            </div>
-            <div class="m-3">
-                <label for="nameLastname">Inserisci nome e cognome del passeggero</label>
-                <input type="text" class="form-control" id="nameLastname" placeholder="Nome e cognome del passeggero">
-            </div>
-            <div class="m-3">
-                <input type="submit" value="Conferma" class="btn btn-outline-success">
-                <input type="reset" value="Annulla" class="btn btn-outline-danger">
-            </div>
-        </form>
+        <section class="bg-light p-5 rounded shadow-lg my-3">
 
-        <p id="finalPrice" class="border p-3 m-3"></p>
+            <h3 class="text-center text-light-emphasis">Il tuo biglietto</h3>
+            <p id="finalPrice" class="border p-3 m-3">
+            </p>
+
+        </section>
 
     </main>
     <script src="script/script.js"></script>

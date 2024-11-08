@@ -13,18 +13,18 @@ const passengerName = document.getElementById('nameLastname');
 const result = document.getElementById('finalPrice');
 const myTicket = document.getElementById('ticket');
 
-const totKm = parseInt(km.value);
-console.log(totKm);
-const passengerAge = parseInt(age.value);
-console.log(passengerAge);
-
-const totPrice = totKm * priceKm;
-console.log(totPrice);
-
 let message;
 let finalPrice;
 
 myTicket.addEventListener("submit", function (event) {
+
+    const totKm = parseInt(km.value);
+    console.log(totKm);
+    const passengerAge = parseInt(age.value);
+    console.log(passengerAge);
+
+    const totPrice = totKm * priceKm;
+    console.log(totPrice);
 
     if (passengerAge <= junior) {
         finalPrice = totPrice - ((totPrice * juniorDiscount) / 100);
