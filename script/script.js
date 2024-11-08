@@ -85,6 +85,6 @@ myTicket.addEventListener("submit", function (event) {
     event.preventDefault();
 });
 
-resetButton.addEventListener('click', function(event){
+resetButton.addEventListener('click', function(){
     ticketDetails.classList.add('d-none');
 });

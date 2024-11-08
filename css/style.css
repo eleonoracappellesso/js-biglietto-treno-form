@@ -6,3 +6,6 @@ body {
     width: 30%;
 }
 
+span {
+    font-weight: lighter;
+}
