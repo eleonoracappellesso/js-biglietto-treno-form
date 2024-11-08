@@ -32,16 +32,46 @@
                 </div>
                 <div class="my-3">
                     <input type="submit" value="Conferma" class="btn btn-outline-success">
-                    <input type="reset" value="Annulla" class="btn btn-outline-danger">
+                    <input type="reset" value="Annulla" class="btn btn-outline-danger" id="resetButton">
                 </div>
             </form>
         </section>
 
-        <section class="bg-light p-5 rounded shadow-lg my-3">
+        <section class="bg-light p-2 rounded shadow-lg my-3 d-flex d-none" id="ticketDetails">
 
-            <h3 class="text-center text-light-emphasis">Il tuo biglietto</h3>
+            <!-- <h3 class="text-center text-light-emphasis">Il tuo biglietto</h3>
             <p id="finalPrice" class="border p-3 m-3">
-            </p>
+            </p> -->
+
+            <div class="w-50">
+                <h5 class="fw-bold">
+                    Anagrafica Passeggero
+                </h5>
+                <p>
+                    Nome e Cognome: <span class="nameLastname"></span>
+                </p>
+                <p>
+                    Età: <span class="selectedAge"></span>
+                </p>
+            </div>
+
+            <div class="w-50">
+                <h5 class="fw-bold">
+                    Dettagli
+                </h5>
+                <p>
+                    Distanza da percorrere: <span class="distance"></span>
+                </p>
+                <p>
+                    Tipologia biglietto: <span class="ticketType"></span>
+                </p>
+                <p>
+                    Sconto applicato: <span class="discount"></span>
+                </p>
+                <p>
+                    Costo totale del biglietto: <span class="totalPrice"></span>
+                </p>
+            </div>
 
         </section>
 
