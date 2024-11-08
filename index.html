@@ -15,13 +15,13 @@
         <h1>Biglietto del treno</h1>
     </header>
     <main class="container">
-        
-        <form>
-            <div>
+
+        <form id="ticket">
+            <div class="m-3">
                 <label for="totKm">Inserisci i km che vuoi percorrere</label>
-                <input type="number" class="form-control" id="totKm" placeholder="Inserisci il numero di km" min="0">
+                <input type="number" class="form-control" id="totKm" placeholder="km da percorrere" min="0">
             </div>
-            <div>
+            <div class="m-3">
                 <label for="age">Inserisci l'età del passeggero</label>
                 <select name="age" id="age" class="form-select">
                     <option value="">Adulto (+18 anni)</option>
@@ -29,11 +29,17 @@
                     <option value="">Senior (+65 anni)</option>
                 </select>
             </div>
-            <input type="submit" value="Conferma" class="btn btn-outline-success">
-            <input type="reset" value="Annulla" class="btn btn-outline-danger">
+            <div class="m-3">
+                <label for="nameLastname">Inserisci nome e cognome del passeggero</label>
+                <input type="text" class="form-control" id="nameLastname" placeholder="Nome e cognome del passeggero">
+            </div>
+            <div class="m-3">
+                <input type="submit" value="Conferma" class="btn btn-outline-success">
+                <input type="reset" value="Annulla" class="btn btn-outline-danger">
+            </div>
         </form>
 
-        <p id="finalPrice"></p>
+        <p id="finalPrice" class="border p-3 m-3"></p>
 
     </main>
     <script src="script/script.js"></script>
