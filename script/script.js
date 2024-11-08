@@ -7,11 +7,14 @@ const seniorDiscount = 40;
 const junior = 17;
 const senior = 65;
 
-const totKm = parseInt(document.getElementById('totKm'));
-const passengerAge = parseInt(document.getElementById('age'));
+const km = document.getElementById('totKm');
+const age = document.getElementById('age');
 const passengerName = document.getElementById('nameLastname');
 const result = document.getElementById('finalPrice');
 const myTicket = document.getElementById('ticket');
+
+const totKm = parseInt(km.value);
+const passengerAge = parseInt(age.value);
 
 const totPrice = totKm * priceKm;
 console.log(totPrice);
@@ -20,6 +23,7 @@ let message;
 let finalPrice;
 
 myTicket.addEventListener("submit", function (event) {
+
     if (passengerAge <= junior) {
         finalPrice = totPrice - ((totPrice * juniorDiscount) / 100);
         message = "E' stato applicato uno sconto del 20% riservato ai minorenni. Il costo finale del tuo biglietto è di €" + finalPrice.toFixed(2);
@@ -33,4 +37,3 @@ myTicket.addEventListener("submit", function (event) {
     result.innerHTML = message;
 });
 
-console.log(message);
